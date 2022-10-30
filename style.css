@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    /*border: 1px solid lightcoral;*/
+}
+
+body, html {
+    height: 100%;
+}
+
+body{
+    background-image: url('./assets/lines-1.png');
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Roboto Mono', monospace;
+}
+
+h1{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+header, footer{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header img{
+    position: absolute;
+    left: 40px;
+    width: 50px;
+}
+
+header img:hover{
+    cursor: pointer;
+}
+
+footer img{
+    width: 35px;
+    transition: all 50ms linear;
+    margin: 0 10px;
+}
+
+footer img:hover{
+    cursor: pointer;
+}
+
+.content-container{
+    position: relative;
+    height: 800px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-image-container{
+    background-image: url('./assets/black-paper-3.png');
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    height: 800px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.buttons-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 2;
+}
+
+.button{
+    background-color: white;
+    font-size: 14px;
+    width: 200px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 25px;
+    transition: all 300ms linear;
+}
+
+.button:hover{
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 3px 3px 3px black;
+}
+
+@media screen and (max-width: 992px) {
+    .background-image-container{
+        background-image: url('./assets/black-paper-4.png');
+    }
+}
+@media screen and (max-width: 600px) {
+    .background-image-container{
+        background-image: url('./assets/black-paper-5.png');
+    }
+    .buttons-container{
+        flex-direction: column;
+    }
+}
