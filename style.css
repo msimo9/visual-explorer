@@ -12,14 +12,14 @@ body{
     background-image: url('./assets/lines-1.png');
     width: 100%;
     background-attachment: fixed;
+    background-repeat: repeat;
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Roboto Mono', monospace;
 }
 
 h1{
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 300;
 }
 
@@ -99,14 +99,78 @@ footer img:hover{
     box-shadow: 3px 3px 3px black;
 }
 
+
+.all-works-container{
+    width: 100%;
+    min-height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.work-container{
+    width: 300px;
+    height: 300px;
+    background-image: url('./assets/black-paper-square-edges.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 20px;
+    transition: all 300ms linear;
+}
+
+.work-container:hover{
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.thumbnail-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.thumbnail-wrapper img{
+    width: 250px;
+    justify-content: center;
+    height: 150px;
+    object-fit: cover;
+}
+
+.description-wrapper{
+    color: #FFFFFF;
+    margin-top: 20px; 
+    padding-left: 25px;
+    padding-right: 25px;
+    word-wrap: normal;
+    flex-wrap: wrap;
+}
+
+#work-artist{
+    font-size: 12px;
+}
+#work-title{
+    font-size: 14px;
+    font-weight: 600;
+}
+#work-year{
+    font-size: 12px;
+}
+
+.description-wrapper p{
+    margin: 5px 0;
+}
+
 @media screen and (max-width: 992px) {
     .background-image-container{
-        background-image: url('./assets/black-paper-4.png');
+        background-image: url('./assets/black-paper-5.png');
     }
 }
 @media screen and (max-width: 600px) {
     .background-image-container{
-        background-image: url('./assets/black-paper-5.png');
+        background-image: url('./assets/black-paper-6.png');
     }
     .buttons-container{
         flex-direction: column;
