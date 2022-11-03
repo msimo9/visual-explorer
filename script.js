@@ -1,32 +1,17 @@
-import {projects} from "./projects.js";
+document.getElementById("footer").innerHTML = `
+    <img onclick="window.open('https://www.facebook.com/soban.matic','_blank')" src="./assets/social-media/facebook.png" />
+    <img onclick="window.open('https://www.instagram.com/matic_soban/', '_blank')" src="./assets/social-media/instagram.png" />
+    <img src="./assets/social-media/whatsapp.png" />
+    <img onclick="window.open('mailto:sobanmatic@gmail.com', '_blank')" src="./assets/social-media/email.png" />
+`;
 
-const allWorksContainer = document.getElementById("all-works-container");
+const pageTitle = document.getElementById("title").innerText;
 
-projects.forEach( item => {
-    allWorksContainer.innerHTML += `
-        <div onclick="window.location = '${item.url}'" class="work-container">
-            <div class="thumbnail-wrapper">
-                <img src="${item.image}"/>
-            </div>
-            <div class="description-wrapper">
-                ${ item.artist !== "" ? `<p id="work-artist">${item.artist}</p>` : ``}
-                <p id="work-title">${item.title}</p>
-                <p id="work-year">${item.year}</p>
-            </div>
-        </div>
-    `;
+document.getElementById("header").innerHTML = `
+    <img id="logo" src="assets/logo2.png" />
+    <h1>${pageTitle.toLowerCase()}</h1>
+`;
+
+document.getElementById("logo").addEventListener("click", ()=>{
+    window.location = "index.html";
 });
-
-/*
-
-<div onclick="window.location = 'https://www.youtube.com/watch?v=Uth0-2EUnok'" class="work-container">
-                <div class="thumbnail-wrapper">
-                    <img src="./assets/thumbnails/retro_anorak.jpeg"/>
-                </div>
-                <div class="description-wrapper">
-                    <p>Retro anorak</p>
-                    <p>2021</p>
-                </div>
-            </div>
-
-*/

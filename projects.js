@@ -1,4 +1,4 @@
-export const projects = [
+const projects = [
     {
         title: "Skoraj za vedno",
         artist: "MUVIT",
@@ -91,3 +91,20 @@ export const projects = [
         image: "./assets/thumbnails/ko-je-ni-zraven-mene.jpeg"
     },
 ];
+
+const allWorksContainer = document.getElementById("all-works-container");
+
+projects.forEach( item => {
+    allWorksContainer.innerHTML += `
+        <div onclick="window.open('${item.url}', '_blank')" class="work-container">
+            <div class="thumbnail-wrapper">
+                <img src="${item.image}"/>
+            </div>
+            <div class="description-wrapper">
+                ${ item.artist !== "" ? `<p id="work-artist">${item.artist}</p>` : ``}
+                <p id="work-title">${item.title}</p>
+                <p id="work-year">${item.year}</p>
+            </div>
+        </div>
+    `;
+});

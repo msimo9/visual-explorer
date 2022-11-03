@@ -163,6 +163,62 @@ footer img:hover{
     margin: 5px 0;
 }
 
+#rent-description{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    margin: 50px 0;
+}
+
+#rent-description p{
+    width: 80%;
+    text-align: justify;
+}
+
+#rent-description span{
+    font-weight: 600;
+}
+
+#rent-description span:hover{
+    cursor: pointer;
+}
+
+#gear-to-rent-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#gear-container{
+    width: 300px;
+    height: 300px;
+    background-image: url('./assets/black-paper-square-edges.png ');
+    background-size: contain    ;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#rent-image-wrapper{
+    margin-bottom: 25px;
+}
+
+#rent-image-wrapper img{
+    height: 200px;
+}
+
+#rent-description-wrapper{
+    color: white;
+    font-weight: 300;
+    font-size: 16px;
+}
+
 @media screen and (max-width: 992px) {
     .background-image-container{
         background-image: url('./assets/black-paper-5.png');
