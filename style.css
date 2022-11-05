@@ -203,20 +203,59 @@ footer img:hover{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 
 #rent-image-wrapper{
     margin-bottom: 25px;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 #rent-image-wrapper img{
-    height: 200px;
+    width: 200px;
 }
 
 #rent-description-wrapper{
     color: white;
-    font-weight: 300;
+    font-weight: 600;
     font-size: 16px;
+    text-align: center;
+}
+
+#rent-price{
+    font-weight: 300;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+#info-circle{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFFFFF;
+    z-index: 3;
+}
+
+#info-label{
+    position: absolute;
+    top: 35px;
+    right: 15px;
+    z-index: 4;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    padding: 10px;
+    display: none;
+    font-size: 12px;
+    font-weight: 300;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width: 992px) {
