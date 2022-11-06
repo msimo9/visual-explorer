@@ -9,7 +9,7 @@ const pageTitle = document.getElementById("title").innerText;
 
 document.getElementById("header").innerHTML = `
     <img id="logo" src="assets/logo2.png" />
-    <h1>${pageTitle.toLowerCase()}</h1>
+    <h1 id="main-title">${pageTitle.toUpperCase()}</h1>
 `;
 
 document.getElementById("logo").addEventListener("click", ()=>{

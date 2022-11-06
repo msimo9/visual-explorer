@@ -81,7 +81,7 @@ const projects = [
         artist: "San Di EGO",
         year: 2022,
         url: "https://www.youtube.com/watch?v=WsmuzcE5v-c&ab_channel=SanDiEgoBand",
-        image: "./assets/thumbnails/ob-meni-lepa.jpeg"
+        image: "./assets/thumbnails/ob-meni-lepa.jpeg",
     },
     {
         title: "Ko je ni zraven mene",
@@ -95,16 +95,36 @@ const projects = [
 const allWorksContainer = document.getElementById("all-works-container");
 
 projects.forEach( item => {
-    allWorksContainer.innerHTML += `
-        <div onclick="window.open('${item.url}', '_blank')" class="work-container">
-            <div class="thumbnail-wrapper">
-                <img src="${item.image}"/>
-            </div>
-            <div class="description-wrapper">
-                ${ item.artist !== "" ? `<p id="work-artist">${item.artist}</p>` : ``}
-                <p id="work-title">${item.title}</p>
-                <p id="work-year">${item.year}</p>
-            </div>
-        </div>
+    const singlePostContainer = document.createElement("div");
+    const singlePostHoverTitle = document.createElement("div");
+    const thumbnailWrapper = document.createElement("div");
+
+    singlePostContainer.classList.add("work-container");
+    singlePostHoverTitle.setAttribute("id", "single-post-hover-title");
+    thumbnailWrapper.classList.add("thumbnail-wrapper");
+
+    singlePostContainer.addEventListener("click", ()=>{
+        window.open(item.url, "_blank");
+    });
+
+    singlePostContainer.addEventListener("mouseenter", ()=>{
+        singlePostHoverTitle.style.display = "flex";
+        thumbnailWrapper.style.opacity = 0.8;
+    });
+    singlePostContainer.addEventListener("mouseleave", ()=>{
+        singlePostHoverTitle.style.display = "none";
+        thumbnailWrapper.style.opacity = 1;
+    });
+
+    singlePostHoverTitle.innerHTML = `
+        <p style="font-size: 14px;">${item.artist.toUpperCase()}</p>
+        <p>${item.title.toUpperCase()}</p>
+    `
+    thumbnailWrapper.innerHTML = `
+        <img src="${item.image}"/>
     `;
+
+    singlePostContainer.appendChild(thumbnailWrapper);
+    singlePostContainer.appendChild(singlePostHoverTitle);
+    allWorksContainer.appendChild(singlePostContainer);
 });

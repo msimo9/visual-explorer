@@ -19,8 +19,8 @@ body{
 }
 
 h1{
-    font-size: 16px;
-    font-weight: 300;
+    font-size: 50px;
+    font-weight: 600;
 }
 
 header, footer{
@@ -29,12 +29,13 @@ header, footer{
     justify-content: center;
     align-items: center;
     position: relative;
+    margin-top: 25px;
 }
 
 header img{
     position: absolute;
     left: 40px;
-    width: 50px;
+    height: 38px;
 }
 
 header img:hover{
@@ -83,7 +84,7 @@ footer img:hover{
 
 .button{
     background-color: white;
-    font-size: 14px;
+    font-size: 18px;
     width: 200px;
     height: 60px;
     display: flex;
@@ -95,7 +96,7 @@ footer img:hover{
 
 .button:hover{
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
     box-shadow: 3px 3px 3px black;
 }
 
@@ -110,18 +111,36 @@ footer img:hover{
 }
 
 .work-container{
-    width: 300px;
-    height: 300px;
-    background-image: url('./assets/black-paper-square-edges.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin: 20px;
+    width: 500px;
+    height: 350px;
+    /*background-image: url('./assets/black-paper-rectangle-edges.png');
+    background-size:contain;
+    background-repeat: no-repeat;*/
+    margin: 0px;
     transition: all 300ms linear;
+    position: relative;
 }
 
 .work-container:hover{
     cursor: pointer;
     opacity: 0.9;
+}
+
+#single-post-hover-title{
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 3;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 22px;
+    transition: all 300ms linear;
+    color: #FFFFFF;
+    flex-direction: column;
 }
 
 .thumbnail-wrapper{
@@ -130,13 +149,14 @@ footer img:hover{
     justify-content: center;
     align-items: center;
     padding-top: 20px;
+    transition: all 300ms linear;
 }
 
 .thumbnail-wrapper img{
-    width: 250px;
+    width: 450px;
     justify-content: center;
-    height: 150px;
     object-fit: cover;
+    background-color: black;
 }
 
 .description-wrapper{
@@ -258,6 +278,44 @@ footer img:hover{
     align-items: center;
 }
 
+.business-slogan{
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.business-slogan span{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.about-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    background-image: url('./assets/black-paper-3.png');
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    height: 800px;
+    width: 100%;
+    padding-top: 70px;
+}
+.about-container img{
+    height: 300px;
+    margin-right: 40px;
+}
+.about-container p{
+    margin-top: 20px;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 300;
+    word-wrap: normal;
+    width: 30%;
+}
+
 @media screen and (max-width: 992px) {
     .background-image-container{
         background-image: url('./assets/black-paper-5.png');
@@ -269,5 +327,27 @@ footer img:hover{
     }
     .buttons-container{
         flex-direction: column;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 40px;
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+    #main-title{
+        word-break:normal;
+        width: 80%;
+    }
+    #logo{
+        left: 0;
+        position: relative;
+        margin-bottom: 15px;
+    }
+    .business-slogan span{
+        width: 80%;
+        text-align: left;
     }
 }
