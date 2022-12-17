@@ -23,6 +23,11 @@ h1{
     font-weight: 600;
 }
 
+h1{
+    font-size: 24px;
+    font-weight: 600;
+}
+
 header, footer{
     height: 100px;
     display: flex;
@@ -112,11 +117,11 @@ footer img:hover{
 
 .work-container{
     width: 500px;
-    height: 350px;
+    height: 300px;
     /*background-image: url('./assets/black-paper-rectangle-edges.png');
     background-size:contain;
     background-repeat: no-repeat;*/
-    margin: 0px;
+    margin: 25px;
     transition: all 300ms linear;
     position: relative;
 }
@@ -127,8 +132,8 @@ footer img:hover{
 }
 
 #single-post-hover-title{
-    width: 500px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
     position: absolute;
     left: 0px;
     top: 0px;
@@ -153,7 +158,8 @@ footer img:hover{
 }
 
 .thumbnail-wrapper img{
-    width: 450px;
+    width: 90%;
+    max-height: 100%;
     justify-content: center;
     object-fit: cover;
     background-color: black;
@@ -190,9 +196,12 @@ footer img:hover{
     align-items: center;
     font-weight: 300;
     margin: 50px 0;
+    position: relative;
+    padding: 0;
 }
 
 #rent-description p{
+    padding: 0;
     width: 80%;
     text-align: justify;
 }
@@ -211,32 +220,42 @@ footer img:hover{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    flex-direction: column;
 }
 
 #gear-container{
     width: 300px;
     height: 300px;
     background-image: url('./assets/black-paper-square-edges.png ');
-    background-size: contain    ;
-    padding: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     position: relative;
+    margin: 10px 0;
+}
+
+#rent-category-wrapper{
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 #rent-image-wrapper{
     margin-bottom: 25px;
-    width: 200px;
-    height: 200px;
+    width: 60%;
     justify-content: center;
     align-items: center;
     display: flex;
 }
 
 #rent-image-wrapper img{
-    width: 200px;
+    width: 100%;
 }
 
 #rent-description-wrapper{
@@ -278,6 +297,35 @@ footer img:hover{
     align-items: center;
 }
 
+#category-menu{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+#category-menu div{
+    margin: 10px 12px;
+}
+
+#category-menu div:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#category-menu li{
+    list-style-type: none;
+}
+
+.rent-category-title{
+    width: 90%;
+    padding-left: 10%;
+    margin: 20px 0;
+}
+
 .business-slogan{
     padding: 15px 0;
     display: flex;
@@ -303,22 +351,51 @@ footer img:hover{
     width: 100%;
     padding-top: 70px;
 }
-.about-container img{
+#about-picture{
     height: 300px;
     margin-right: 40px;
+    z-index: 2;
 }
-.about-container p{
+#about-text{
+    padding: 10px;
     margin-top: 20px;
     color: #FFFFFF;
     font-size: 18px;
     font-weight: 300;
     word-wrap: normal;
+    z-index: 2;
     width: 30%;
+    text-align: justify;
 }
 
 @media screen and (max-width: 992px) {
     .background-image-container{
         background-image: url('./assets/black-paper-5.png');
+    }
+
+    #category-menu{
+        padding-left: 10%;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    
+    #category-menu li{
+        list-style-type: disc;
+    }
+
+    #info-circle{
+        display: none;
+    }
+
+    #rent-category-wrapper{
+        justify-content: center;
+    }
+
+    .about-container{
+        flex-direction: column;
+    }
+    #about-text{
+        width: 60%;
     }
 }
 @media screen and (max-width: 600px) {
@@ -346,8 +423,48 @@ footer img:hover{
         position: relative;
         margin-bottom: 15px;
     }
+
     .business-slogan span{
         width: 80%;
         text-align: left;
+    }
+
+
+    .work-container{
+        width: 400px;
+        height: 200px;
+        margin: 10px 0;
+    }
+
+    .thumbnail-wrapper{
+        opacity: 0.8;
+    }
+
+    #single-post-hover-title{
+        display: flex;
+    }
+
+    #category-menu{
+        width: 90%;
+        padding-left: 10%;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    #category-menu div{
+        margin: 10px 0px;
+    }
+    
+    #category-menu li{
+        list-style-type: disc;
+    }
+
+    #rent-image-wrapper{
+        margin-bottom: 10px;
+        width: 40%;
+    }
+
+    #about-text{
+        width: 90%;
     }
 }
