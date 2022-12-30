@@ -24,6 +24,22 @@ const gear = [
         categoryID: 0,
         categoryName: 'CAMERAS',
     },
+    {
+        name: "Sony A6300",
+        image: "./assets/gear/sony-a6300.png",
+        price: "30",
+        info: "Objektiv 18-105 f4, rig s powerbankom in SD kartica 128GB.",
+        categoryID: 0,
+        categoryName: 'CAMERAS',
+    },
+    {
+        name: "Sony A6300",
+        image: "./assets/gear/gopro-hero-black-7.png",
+        price: "30",
+        info: "",
+        categoryID: 0,
+        categoryName: 'CAMERAS',
+    },
     ],
     [
     {
@@ -58,10 +74,34 @@ const gear = [
         categoryID: 1,
         categoryName: 'LENSES',
     },
+    {
+        name: "EF - Canon 14mm F2,8",
+        image: "./assets/gear/canon-14mm.png",
+        price: "20",
+        info: "",
+        categoryID: 1,
+        categoryName: 'LENSES',
+    },
+    {
+        name: "MMLITE Sony E - EF adapter",
+        image: "./assets/gear/mmlite-sony-e-ef-adapter.png",
+        price: "5",
+        info: "",
+        categoryID: 1,
+        categoryName: 'LENSES',
+    },
+    {
+        name: "Sony 18-105mm f4",
+        image: "./assets/gear/sony-18-105-mm.png",
+        price: "10",
+        info: "",
+        categoryID: 1,
+        categoryName: 'LENSES',
+    },
     ],
     [
         {
-            name: "Variable ND Filter Polar pro",
+            name: "Variable ND Filter Polar pro 77mm",
             image: "./assets/gear/nd-variable-filter-polar-pro.png",
             price: "5",
             info: "",
@@ -72,6 +112,12 @@ const gear = [
             name: "Atomos Ninja V",
             image: "./assets/gear/atomos-ninja-v.png",
             price: "20",
+            info: "",
+        },
+        {
+            name: "Feelworld FW279 4K",
+            image: "./assets/gear/feelworld-fw279.png",
+            price: "5",
             info: "",
         },
         {
@@ -99,6 +145,20 @@ const gear = [
     ],
     [
         {
+            name: "V-lock Hedbox 150Wh",
+            image: "./assets/gear/hedbox-nero-mx.png",
+            price: "5",
+            info: "",
+        }, 
+        {
+            name: "Double V-lock Charger HedBox",
+            image: "./assets/gear/double-v-lock-charger.png",
+            price: "5",
+            info: "",
+        }, 
+    ],
+    [
+        {
             name: "Aputure LS C300d II",
             image: "./assets/gear/aputure-ls-c300d-ii.png",
             price: "35",
@@ -116,10 +176,34 @@ const gear = [
             price: "10",
             info: "",
         },
+        {
+            name: "Aputure Lantern",
+            image: "./assets/gear/aputure-lantern.png",
+            price: "5",
+            info: "",
+        },
+        {
+            name: "Aputure Amaran 200x",
+            image: "./assets/gear/aputure-amaran-200x.png",
+            price: "20",
+            info: "",
+        },
+        {
+            name: "Yongnuo YN360 LED",
+            image: "./assets/gear/yongnuo-yn360.png",
+            price: "5",
+            info: "",
+        },
+        {
+            name: "Godox C-stand + boompole",
+            image: "./assets/gear/godox-c-stand.png",
+            price: "5",
+            info: "",
+        },
     ],
     [
         {
-            name: "RODE Video mic Pro+",
+            name: "RODE Video mic Pro+ z DeadCat VMP+",
             image: "./assets/gear/rode-video-mic-pro-plus.png",
             price: "15",
             info: "",
@@ -136,14 +220,33 @@ const gear = [
             price: "10",
             info: "",
         },
+        {
+            name: "RODE Wireless GO II + 2x lavalier mic",
+            image: "./assets/gear/rode-wireless-go-ii.png",
+            price: "20",
+            info: "",
+        },
     ],
     [
         {
             name: "Quadralite Reflector 5in1",
             image: "./assets/gear/quadralite-reflectors-5-1.png",
-            
             price: "5",
             info: "",
+        },
+        {
+            name: "Lastolite 2x2m (bela/srebrna, diffuza)",
+            image: "./assets/gear/lastolite-2-x-2-m.png",
+            price: "20",
+            info: "",
+        },
+    ],
+    [
+        {
+            name: "Motorola T82 Extreme 4x",
+            image: "./assets/gear/motorola-t82-extreme.png",
+            price: "15",
+            info: "V kompletu tudi slušalke.",
         },
     ],
 ];
@@ -155,9 +258,11 @@ const categories = [
     "MONITORS",
     "MEMORY",
     "STABILIZATION",
+    "ENERGY",
     "LIGHTS",
     "SOUND",
-    "REFLECTORS"
+    "MODIFIERS",
+    "PRODUCTION"
 ]
 
 const categoryMenu = document.getElementById("category-menu");
@@ -203,21 +308,14 @@ gear.forEach((item, index) => {
             infoCircle.innerHTML = `
                 <ion-icon name="information-circle"></ion-icon>
             `;
-
-            infoCircle.addEventListener("mouseenter", ()=>{
-                infoLabel.style.display = "flex";
-            });
-
-            infoCircle.addEventListener("mouseleave", ()=>{
-                infoLabel.style.display = "none";
-            });
-
+            infoCircle.style.border = "3px solid red";
 
             rentGearWrapper.appendChild(infoLabel);
-            rentGearWrapper.appendChild(infoCircle);
+            //rentGearWrapper.appendChild(infoCircle);
         }
 
         categoryWrapper.appendChild(rentGearWrapper);
+
     });
     gearContainer.appendChild(categoryWrapper);
 });

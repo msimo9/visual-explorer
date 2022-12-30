@@ -203,7 +203,7 @@ footer img:hover{
 #rent-description p{
     padding: 0;
     width: 80%;
-    text-align: justify;
+    text-align: center;
 }
 
 #rent-description span{
@@ -278,23 +278,23 @@ footer img:hover{
     font-size: 20px;
     font-weight: 600;
     color: #FFFFFF;
-    z-index: 3;
+    z-index: 99;
 }
 
 #info-label{
     position: absolute;
     top: 35px;
     right: 15px;
-    z-index: 4;
+    z-index: 99;
     background-color: #FFFFFF;
     border-radius: 15px;
     padding: 10px;
-    display: none;
     font-size: 12px;
     font-weight: 300;
     width: 60px;
     justify-content: center;
     align-items: center;
+    display: none;
 }
 
 #category-menu{
