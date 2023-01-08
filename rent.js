@@ -252,17 +252,17 @@ const gear = [
 ];
 
 const categories = [
-    "CAMERAS",
-    "LENSES",
-    "FILTERS",
-    "MONITORS",
-    "MEMORY",
-    "STABILIZATION",
-    "ENERGY",
-    "LIGHTS",
-    "SOUND",
-    "MODIFIERS",
-    "PRODUCTION"
+    "KAMERE",
+    "OBJEKTIVI",
+    "FILTRI",
+    "MONITORJI",
+    "SPOMIN",
+    "STABILIZACIJA",
+    "BATERIJE",
+    "LUČI",
+    "ZVOK",
+    "ODBOJNIKI",
+    "PRODUKCIJA"
 ]
 
 const categoryMenu = document.getElementById("category-menu");
