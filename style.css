@@ -413,6 +413,10 @@ footer img:hover{
     #about-text{
         width: 60%;
     }
+
+    #showreel-container{
+        margin-top: -300px;
+    }
 }
 @media screen and (max-width: 600px) {
     .background-image-container{
@@ -482,5 +486,8 @@ footer img:hover{
 
     #about-text{
         width: 90%;
+    }
+    #showreel-container{
+        margin-top: -300px;
     }
 }
