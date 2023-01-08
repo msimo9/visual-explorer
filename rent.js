@@ -33,7 +33,7 @@ const gear = [
         categoryName: 'CAMERAS',
     },
     {
-        name: "Sony A6300",
+        name: "GoPro Hero Black 7",
         image: "./assets/gear/gopro-hero-black-7.png",
         price: "30",
         info: "",

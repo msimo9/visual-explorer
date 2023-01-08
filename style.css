@@ -368,6 +368,19 @@ footer img:hover{
     text-align: justify;
 }
 
+#showreel-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -350px;
+    z-index: 4;
+}
+
+#showreel-container iframe{
+    z-index: 5;
+}
+
 @media screen and (max-width: 992px) {
     body{
         background-attachment: scroll;
